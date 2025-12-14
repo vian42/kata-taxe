@@ -1,0 +1,25 @@
+package fr.maynadier
+
+import org.assertj.core.api.Assertions.assertThat
+import org.assertj.core.api.Assertions.assertThatThrownBy
+import org.junit.jupiter.api.Test
+import java.math.BigDecimal
+
+class TaxRounderTest {
+
+    val rounder = TaxRounder()
+
+    @Test
+    fun `l'arrondi d'un montant sans décimale est lui même`() {
+        val montant : BigDecimal = BigDecimal.valueOf(1.00)
+        val result = rounder.round(montant)
+        assertThat (result).isEqualTo(BigDecimal.valueOf(1.00).setScale(2))
+    }
+    @Test
+    fun `l'arrondi d'un montant est arroundi au 5 centiemé supérieur`() {
+        val montant : BigDecimal = BigDecimal.valueOf(1.02)
+        val result = rounder.round(montant)
+        assertThat (result).isEqualTo(BigDecimal.valueOf(1.05))
+    }
+
+}
