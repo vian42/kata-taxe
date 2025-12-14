@@ -13,10 +13,11 @@ Fonctionnalité: Calculateur de taxe
     Alors elle de valeur 1.00 €
 
   Plan du Scénario: pour les produits importés, taxe additionnel de 5%
-    Etant donné l'achat d'un produit de type <type> de cout <cout> € et importé
+    Etant donné l'achat d'un produit de type <type>, de cout <cout> €, et <taxed> et importé
     Quand Je calcule le montant de sa taxe
     Alors elle de valeur <valeur> €
+
     Exemples:
-      | type   | cout | valeur |
-      | pommes | 10   | 10.5   |
-      | jouet  | 10   | 11.5   |
+      | type   | cout | taxed |valeur |
+      | "pommes" | 10.00   | false | 0.50   |
+      | "jouet"  | 10.00   | true  | 1.50   |
