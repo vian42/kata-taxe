@@ -1,4 +1,4 @@
-package fr.maynadier.steps
+package fr.maynadier.steps.tools
 
 import io.cucumber.java.ParameterType
 import java.math.BigDecimal

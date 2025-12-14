@@ -24,6 +24,7 @@ dependencies {
     testImplementation("org.junit.platform:junit-platform-suite-api:1.10.1")
     testRuntimeOnly("org.junit.platform:junit-platform-suite-engine:1.10.1")
     testImplementation(platform("org.junit:junit-bom:5.10.1"))
+    testImplementation("io.cucumber:cucumber-picocontainer:7.15.0")
 }
 
 application {

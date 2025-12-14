@@ -9,6 +9,7 @@ import fr.maynadier.domain.obj.TaxedClassification.UN_TAXED
 import fr.maynadier.infra.IseaBillPrinter
 import fr.maynadier.infra.IseaTaxeCalculator
 import fr.maynadier.infra.TaxeRounder
+import fr.maynadier.steps.tools.SharedContext
 import io.cucumber.datatable.DataTable
 import io.cucumber.java.fr.Alors
 import io.cucumber.java.fr.Et
@@ -17,7 +18,7 @@ import io.cucumber.java.fr.Quand
 import org.assertj.core.api.Assertions.assertThat
 import java.math.BigDecimal
 
-class FactureSteps {
+class FactureSteps(private val context: SharedContext) {
 
     var panier = Panier(emptyList())
     val rounder = TaxeRounder()
@@ -42,7 +43,7 @@ class FactureSteps {
     @Quand("la facture est émise")
     fun laFactureEstÉmise() {
         bill = printer.print(panier)
-        println(bill)
+        context.bill = bill
     }
 
     @Alors("les produits sont listés avec le prix taxé:")
