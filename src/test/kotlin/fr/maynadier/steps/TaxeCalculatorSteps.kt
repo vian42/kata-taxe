@@ -1,12 +1,12 @@
 package fr.maynadier.steps
 
-import fr.maynadier.ImportStatus.IMPORTED
-import fr.maynadier.ImportStatus.LOCAL
-import fr.maynadier.IseaTaxeCalculator
-import fr.maynadier.Product
-import fr.maynadier.TaxeRounder
-import fr.maynadier.TaxedClassification.TAXED
-import fr.maynadier.TaxedClassification.UN_TAXED
+import fr.maynadier.domain.obj.ImportStatus.IMPORTED
+import fr.maynadier.domain.obj.ImportStatus.LOCAL
+import fr.maynadier.domain.obj.Product
+import fr.maynadier.domain.obj.TaxedClassification.TAXED
+import fr.maynadier.domain.obj.TaxedClassification.UN_TAXED
+import fr.maynadier.infra.IseaTaxeCalculator
+import fr.maynadier.infra.TaxeRounder
 import io.cucumber.java.fr.Alors
 import io.cucumber.java.fr.Etantdonné
 import io.cucumber.java.fr.Quand

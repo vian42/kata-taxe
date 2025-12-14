@@ -1,5 +1,5 @@
 # language: fr
-Fonctionnalité: Calculateur de taxe
+Fonctionnalité: Calculateur de taxe - Exemple
 
   #exemple de l'énoncé
   Scénario: scénario 1

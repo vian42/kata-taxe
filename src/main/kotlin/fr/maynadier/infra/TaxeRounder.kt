@@ -1,5 +1,6 @@
-package fr.maynadier
+package fr.maynadier.infra
 
+import fr.maynadier.domain.Rounder
 import java.math.BigDecimal
 import java.math.RoundingMode
 

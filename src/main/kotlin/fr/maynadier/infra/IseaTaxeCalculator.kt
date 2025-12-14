@@ -1,5 +1,8 @@
-package fr.maynadier
+package fr.maynadier.infra
 
+import fr.maynadier.domain.Rounder
+import fr.maynadier.domain.TaxeCalculator
+import fr.maynadier.domain.obj.Product
 import java.math.BigDecimal
 
 class IseaTaxeCalculator(val rounder: Rounder) : TaxeCalculator {

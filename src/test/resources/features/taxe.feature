@@ -1,5 +1,5 @@
 # language: fr
-Fonctionnalité: Calculateur de taxe
+Fonctionnalité: Calculateur de taxe pour un produit
 
   Scénario: pour les produit exempté, la taxe est de 0%
     #ivres, de la nourriture et des médicaments

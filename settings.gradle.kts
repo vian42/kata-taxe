@@ -1,1 +1,1 @@
-rootProject.name = "vianney-maynadier-taxe"
+rootProject.name = "vianney-maynadier-infra"

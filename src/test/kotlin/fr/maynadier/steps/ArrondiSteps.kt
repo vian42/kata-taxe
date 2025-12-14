@@ -1,7 +1,7 @@
 package fr.maynadier.steps
 
-import fr.maynadier.Rounder
-import fr.maynadier.TaxeRounder
+import fr.maynadier.domain.Rounder
+import fr.maynadier.infra.TaxeRounder
 import io.cucumber.java.en.Given
 import io.cucumber.java.en.Then
 import io.cucumber.java.en.When

@@ -1,5 +1,5 @@
 # language: fr
-Fonctionnalité: Calculateur de taxe
+Fonctionnalité: Arrondi
 
   Plan du Scénario: Arrondi de la valeur de la taxe : 5 cents supérieur
     Etant donné un montant de taxe calculée de <montant>

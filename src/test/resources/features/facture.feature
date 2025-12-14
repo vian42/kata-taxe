@@ -1,5 +1,5 @@
 # language: fr
-Fonctionnalité: Calculateur de taxe
+Fonctionnalité: Edition de la facture
 
   Scénario: Informations présentes sur la facture
     Etant donné une commande avec les produits suivant:
