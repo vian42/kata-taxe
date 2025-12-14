@@ -3,12 +3,12 @@ Fonctionnalité: Calculateur de taxe
 
   Scénario: pour les produit exempté, la taxe est de 0%
     #ivres, de la nourriture et des médicaments
-    Etant donné l'achat d'un produit de type "livre" de cout 10 €
+    Etant donné l'achat d'un produit de type "livre" de cout 10.00 € et exempté de taxe
     Quand Je calcule le montant de sa taxe
-    Alors elle de valeur 0 €
+    Alors elle de valeur 0.00 €
 
   Scénario: pour les produit classique  10%
-    Etant donné l'achat d'un produit de type "parfum" de cout 10 €
+    Etant donné l'achat d'un produit de type "parfum" de cout 10 € et taxé
     Quand Je calcule le montant de sa taxe
     Alors elle de valeur 1 €
 

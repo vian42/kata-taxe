@@ -1,4 +1,31 @@
 package fr.maynadier.steps
 
+import fr.maynadier.Product
+import io.cucumber.java.PendingException
+import io.cucumber.java.fr.Alors
+import io.cucumber.java.fr.Etantdonné
+import io.cucumber.java.fr.Quand
+import org.assertj.core.api.Assertions.assertThat
+import java.math.BigDecimal
+
+
 class TaxeCalculatorSteps {
+
+    lateinit var product: Product
+    lateinit var taxeAmount: BigDecimal
+
+    @Etantdonné("l'achat d'un produit de type {string} de cout {montant} € et exempté de taxe")
+    fun l_achat_d_un_produit_de_type_de_cout(string: String, montant: BigDecimal) {
+        product = Product(string, montant)
+    }
+
+    @Quand("Je calcule le montant de sa taxe")
+    fun je_calcule_le_montant_de_sa_taxe() {
+        taxeAmount = product.getTaxeAmount()
+    }
+
+    @Alors("elle de valeur {montant} €")
+    fun elle_de_valeur(montant: BigDecimal) {
+        assertThat(taxeAmount).isEqualTo(montant)
+    }
 }
