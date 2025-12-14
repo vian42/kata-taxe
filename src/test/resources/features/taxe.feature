@@ -8,9 +8,9 @@ Fonctionnalité: Calculateur de taxe
     Alors elle de valeur 0.00 €
 
   Scénario: pour les produit classique  10%
-    Etant donné l'achat d'un produit de type "parfum" de cout 10 € et taxé
+    Etant donné l'achat d'un produit de type "parfum" de cout 10.00 € et taxé
     Quand Je calcule le montant de sa taxe
-    Alors elle de valeur 1 €
+    Alors elle de valeur 1.00 €
 
   Plan du Scénario: pour les produits importés, taxe additionnel de 5%
     Etant donné l'achat d'un produit de type <type> de cout <cout> € et importé
