@@ -1,7 +1,7 @@
 package fr.maynadier.steps
 
 import fr.maynadier.Rounder
-import fr.maynadier.TaxRounder
+import fr.maynadier.TaxeRounder
 import io.cucumber.java.en.Given
 import io.cucumber.java.en.Then
 import io.cucumber.java.en.When
@@ -14,7 +14,7 @@ class ArrondiSteps {
     private var montantTaxe: BigDecimal = BigDecimal.ZERO
     private var montantFinal: BigDecimal = BigDecimal.ZERO
 
-    private val rounder : Rounder = TaxRounder()
+    private val rounder : Rounder = TaxeRounder()
 
     @Given("un montant de taxe calculée de {montant}")
     fun unMontantDeTaxeCalculéeDe(montant: BigDecimal) {

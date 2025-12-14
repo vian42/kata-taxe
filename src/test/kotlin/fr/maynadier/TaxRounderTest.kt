@@ -1,13 +1,12 @@
 package fr.maynadier
 
 import org.assertj.core.api.Assertions.assertThat
-import org.assertj.core.api.Assertions.assertThatThrownBy
 import org.junit.jupiter.api.Test
 import java.math.BigDecimal
 
 class TaxRounderTest {
 
-    val rounder = TaxRounder()
+    val rounder = TaxeRounder()
 
     @Test
     fun `l'arrondi d'un montant sans décimale est lui même`() {

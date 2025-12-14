@@ -1,6 +1,8 @@
 package fr.maynadier.steps
 
+import fr.maynadier.IseaTaxeCalculator
 import fr.maynadier.Product
+import fr.maynadier.TaxeRounder
 import io.cucumber.java.fr.Alors
 import io.cucumber.java.fr.Etantdonné
 import io.cucumber.java.fr.Quand
@@ -12,6 +14,8 @@ class TaxeCalculatorSteps {
 
     lateinit var product: Product
     lateinit var taxeAmount: BigDecimal
+    val taxeRounder = TaxeRounder()
+    val taxeCalculator = IseaTaxeCalculator(taxeRounder)
 
     @Etantdonné("l'achat d'un produit de type {string} de cout {montant} € et exempté de taxe")
     fun l_achat_d_un_produit_de_type_de_cout(string: String, montant: BigDecimal) {
@@ -30,7 +34,7 @@ class TaxeCalculatorSteps {
 
     @Quand("Je calcule le montant de sa taxe")
     fun je_calcule_le_montant_de_sa_taxe() {
-        taxeAmount = product.getTaxeAmount()
+        taxeAmount = taxeCalculator.getTaxeAmount(product)
     }
 
     @Alors("elle de valeur {montant} €")
