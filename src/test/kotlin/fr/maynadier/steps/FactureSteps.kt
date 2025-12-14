@@ -1,11 +1,11 @@
 package fr.maynadier.steps
 
-import fr.maynadier.domain.obj.ImportStatus.IMPORTED
-import fr.maynadier.domain.obj.ImportStatus.LOCAL
-import fr.maynadier.domain.obj.Panier
-import fr.maynadier.domain.obj.Product
-import fr.maynadier.domain.obj.TaxedClassification.TAXED
-import fr.maynadier.domain.obj.TaxedClassification.UN_TAXED
+import fr.maynadier.domain.model.ImportStatus.IMPORTED
+import fr.maynadier.domain.model.ImportStatus.LOCAL
+import fr.maynadier.domain.model.Panier
+import fr.maynadier.domain.model.Product
+import fr.maynadier.domain.model.TaxedClassification.TAXED
+import fr.maynadier.domain.model.TaxedClassification.UN_TAXED
 import fr.maynadier.infra.IseaBillPrinter
 import fr.maynadier.infra.IseaTaxeCalculator
 import fr.maynadier.infra.TaxeRounder

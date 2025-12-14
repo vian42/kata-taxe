@@ -1,6 +1,6 @@
 package fr.maynadier.domain
 
-import fr.maynadier.domain.obj.Product
+import fr.maynadier.domain.model.Product
 import java.math.BigDecimal
 
 interface TaxeCalculator {

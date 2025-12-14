@@ -1,8 +1,8 @@
 package fr.maynadier.infra
 
-import fr.maynadier.domain.obj.ImportStatus
-import fr.maynadier.domain.obj.Product
-import fr.maynadier.domain.obj.TaxedClassification
+import fr.maynadier.domain.model.ImportStatus
+import fr.maynadier.domain.model.Product
+import fr.maynadier.domain.model.TaxedClassification
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test
 import java.math.BigDecimal

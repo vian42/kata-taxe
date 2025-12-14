@@ -1,4 +1,4 @@
-package fr.maynadier.domain.obj
+package fr.maynadier.domain.model
 
 import java.math.BigDecimal
 

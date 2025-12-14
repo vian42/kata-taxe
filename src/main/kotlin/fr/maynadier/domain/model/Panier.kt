@@ -1,4 +1,4 @@
-package fr.maynadier.domain.obj
+package fr.maynadier.domain.model
 
 class Panier(val produits: List<Product>) {
     fun ajouteProduit(produit: Product): Panier {
