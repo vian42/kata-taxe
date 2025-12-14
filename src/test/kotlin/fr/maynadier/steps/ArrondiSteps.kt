@@ -9,7 +9,7 @@ import org.assertj.core.api.Assertions.assertThat
 import java.math.BigDecimal
 
 
-class MyStepdefs {
+class ArrondiSteps {
 
     private var montantTaxe: BigDecimal = BigDecimal.ZERO
     private var montantFinal: BigDecimal = BigDecimal.ZERO
