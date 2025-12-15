@@ -41,13 +41,13 @@ class FactureSteps(private val context: SharedContext) {
     }
 
     @Quand("la facture est émise")
-    fun laFactureEstÉmise() {
+    fun laFactureEstEmise() {
         bill = printer.print(panier)
         context.bill = bill
     }
 
     @Alors("les produits sont listés avec le prix taxé:")
-    fun lesProduitsSontListésAvecLePrixTaxé(dataTable: DataTable) {
+    fun lesProduitsSontListesAvecLePrixTaxe(dataTable: DataTable) {
         val rows: List<Map<String, String>> = dataTable.asMaps(String::class.java, String::class.java)
         for (row in rows) {
             assertThat(bill).contains(row["nom"]!!)

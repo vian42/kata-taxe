@@ -15,7 +15,7 @@ class TaxRounderTest {
         Assertions.assertThat(result).isEqualTo(BigDecimal.valueOf(1.00).setScale(2))
     }
     @Test
-    fun `l'arrondi d'un montant est arroundi au 5 centiemé supérieur`() {
+    fun `l'arrondi d'un montant est arrondi au 5 centieme supérieur`() {
         val montant : BigDecimal = BigDecimal.valueOf(1.02)
         val result = rounder.round(montant)
         Assertions.assertThat(result).isEqualTo(BigDecimal.valueOf(1.05))

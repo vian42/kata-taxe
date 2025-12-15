@@ -27,12 +27,12 @@ class TaxeCalculatorSteps {
     }
 
     @Etantdonné("l'achat d'un produit de type {string} de cout {montant} € et taxé")
-    fun l_achat_d_un_produit_de_type_de_cout_et_taxé(string: String, montant: BigDecimal) {
+    fun l_achat_d_un_produit_de_type_de_cout_et_taxe(string: String, montant: BigDecimal) {
         product = Product(string, montant, TAXED, LOCAL)
     }
 
     @Etantdonné("l'achat d'un produit de type {string}, de cout {montant} €, et {boolean} et importé")
-    fun l_achat_d_un_produit_de_type_pommes_de_cout_et_importé(name:String, montant: BigDecimal, taxed: Boolean) {
+    fun l_achat_d_un_produit_de_type_pommes_de_cout_et_importe(name: String, montant: BigDecimal, taxed: Boolean) {
         val taxedStatus = if (taxed) TAXED else UN_TAXED
         product = Product(name, montant, taxedStatus, IMPORTED)
     }
