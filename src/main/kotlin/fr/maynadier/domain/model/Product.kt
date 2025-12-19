@@ -2,4 +2,9 @@ package fr.maynadier.domain.model
 
 import java.math.BigDecimal
 
-data class Product(val name: String, val price: BigDecimal, val taxed: TaxedClassification, val imported: ImportStatus)
+data class Product(
+    val name: String,
+    val price: BigDecimal,
+    val taxed: TaxedClassification,
+    val imported: ImportStatus
+)
