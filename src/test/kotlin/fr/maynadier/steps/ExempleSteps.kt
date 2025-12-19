@@ -9,11 +9,11 @@ class ExempleSteps(private val context: SharedContext) {
 
     @Et("le montant des taxes est {montant}")
     fun leMontantDesTaxesEst(montant: BigDecimal) {
-        assertThat(context.bill).contains(montant.toString())
+        assertThat(context.printedBill).contains(montant.toString())
     }
 
     @Et("le total de la facture est {montant}")
     fun leTotalDeLaFactureEst(montant: BigDecimal) {
-        assertThat(context.bill).contains(montant.toString())
+        assertThat(context.printedBill).contains(montant.toString())
     }
 }
