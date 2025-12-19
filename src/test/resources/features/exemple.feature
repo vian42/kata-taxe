@@ -35,7 +35,7 @@ Fonctionnalité: Calculateur de taxe - Exemple
       | quantite | nom                                 | prix  | taxe     | origine |
       | 1        | flacon de parfum importé            | 27.99 | taxe     | importé |
       | 1        | flacon de parfum                    | 18.99 | taxe     | local   |
-      | 1        | boîte de pilules contre la migraine | 9.75  | non taxé | local   |
+      | 1        | boite de pilules contre la migraine | 9.75  | non taxé | local   |
       | 1        | boite de chocolats importée         | 11.25 | non taxé | importé |
     Quand la facture est émise
     Alors les produits sont listés avec le prix taxé:
