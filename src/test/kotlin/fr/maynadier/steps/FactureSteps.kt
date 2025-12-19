@@ -24,7 +24,6 @@ class FactureSteps(private val context: SharedContext) {
     val rounder = TaxeRounder()
     val taxeCalculator = IseaTaxeCalculator(rounder)
     val printer = IseaBillPrinter(taxeCalculator)
-    lateinit var bill: String
 
     @Etantdonné("une commande avec les produits suivant:")
     fun uneCommandeAvecLesProduitsSuivant(dataTable: DataTable) {
@@ -42,26 +41,25 @@ class FactureSteps(private val context: SharedContext) {
 
     @Quand("la facture est émise")
     fun laFactureEstEmise() {
-        bill = printer.print(panier)
-        context.bill = bill
+        context.bill = printer.print(panier)
     }
 
     @Alors("les produits sont listés avec le prix taxé:")
     fun lesProduitsSontListesAvecLePrixTaxe(dataTable: DataTable) {
         val rows: List<Map<String, String>> = dataTable.asMaps(String::class.java, String::class.java)
         for (row in rows) {
-            assertThat(bill).contains(row["nom"]!!)
-            assertThat(bill).contains(row["prix"]!!)
+            assertThat(context.bill).contains(row["nom"]!!)
+            assertThat(context.bill).contains(row["prix"]!!)
         }
     }
 
     @Et("au bas de la facture figurent le montant total \\(TTC) {montant}")
     fun auBasDeLaFactureFigurentLeMontantTotalTTC(montant: BigDecimal) {
-        assertThat(bill).contains("Total : $montant")
+        assertThat(context.bill).contains("Total : $montant")
     }
 
     @Et("figure le montant total des taxes {montant}")
     fun figureLeMontantTotalDesTaxes(montant: BigDecimal) {
-        assertThat(bill).contains("Montant des taxes : $montant")
+        assertThat(context.bill).contains("Montant des taxes : $montant")
     }
 }
