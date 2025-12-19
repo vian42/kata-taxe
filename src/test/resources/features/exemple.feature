@@ -42,7 +42,7 @@ Fonctionnalité: Calculateur de taxe - Exemple
       | quantite | nom                                 | prix  |
       | 1        | flacon de parfum importé            | 32.19 |
       | 1        | flacon de parfum                    | 20.89 |
-      | 1        | boîte de pilules contre la migraine | 9.75  |
+      | 1        | boite de pilules contre la migraine | 9.75  |
       | 1        | boite de chocolats importée         | 11.85 |
     Et le montant des taxes est 6.70
     Et le total de la facture est 74.68
